@@ -1,0 +1,44 @@
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+env/
+venv/
+virtualenv/
+.Python
+pip-selfcheck.json
+
+# Django
+*.log
+*.pot
+*.mo
+*.po
+/manage.py
+/config/local_settings.py
+*.sqlite3
+.db.sqlite3
+/static_root/
+/media_root/
+
+# IDE / Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Poetry
+/.venv
