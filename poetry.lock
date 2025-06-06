@@ -12,6 +12,9 @@ files = [
     {file = "asgiref-3.8.1.tar.gz", hash = "sha256:c343bd80a0bec947a9860adb4c432ffa7db769836c64238fc34bdc3fec84d590"},
 ]
 
+[package.dependencies]
+typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
+
 [package.extras]
 tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
@@ -37,6 +40,22 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-debug-toolbar"
+version = "5.2.0"
+description = "A configurable set of panels that display various debug information about the current request/response."
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "django_debug_toolbar-5.2.0-py3-none-any.whl", hash = "sha256:15627f4c2836a9099d795e271e38e8cf5204ccd79d5dbcd748f8a6c284dcd195"},
+    {file = "django_debug_toolbar-5.2.0.tar.gz", hash = "sha256:9e7f0145e1a1b7d78fcc3b53798686170a5b472d9cf085d88121ff823e900821"},
+]
+
+[package.dependencies]
+django = ">=4.2.9"
+sqlparse = ">=0.2"
+
+[[package]]
 name = "sqlparse"
 version = "0.5.3"
 description = "A non-validating SQL parser."
@@ -53,6 +72,19 @@ dev = ["build", "hatch"]
 doc = ["sphinx"]
 
 [[package]]
+name = "typing-extensions"
+version = "4.14.0"
+description = "Backported and Experimental Type Hints for Python 3.9+"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+markers = "python_version < \"3.11\""
+files = [
+    {file = "typing_extensions-4.14.0-py3-none-any.whl", hash = "sha256:a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af"},
+    {file = "typing_extensions-4.14.0.tar.gz", hash = "sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"},
+]
+
+[[package]]
 name = "tzdata"
 version = "2025.2"
 description = "Provider of IANA time zone data"
@@ -67,5 +99,5 @@ files = [
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.13"
-content-hash = "c79dba920782e27dc0a1ee239e4893ee3e4000abaf06e7bdd91218e7374bffca"
+python-versions = ">=3.10"
+content-hash = "5f8cbbaa901d2a45f3cf66396fbfb4bbbda0a5aa5d4dfbb118ebbbe748db9f4e"

@@ -3,15 +3,21 @@ name = "django_app"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "aleksei",email = "bscadet@yandex.ru"}
+    { name = "aleksei", email = "bscadet@yandex.ru" }
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
-    "django (>=5.2.1,<6.0.0)"
+    "django>=5.2.1,<6.0.0",
+    "django-debug-toolbar (>=5.2.0,<6.0.0)"
 ]
 
+[tool.poetry]
+packages = [
+    { include = "mysite", from = "src" },
+    { include = "polls", from = "src" }
+]
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
